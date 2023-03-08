@@ -1,0 +1,32 @@
+body {
+    background: #000;
+}
+
+body,
+div,
+ul,
+li{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    background:black;
+    list-style: none;
+}
+
+li:hover {
+    background: gray;
+}
+
+a {
+    font-size: 100px;
+    font-weight: bold;
+    text-decoration:none;
+    color: white;
+}
+
+li {
+    display: block;
+    float: left;
+    text-align: center;
+    border: solid 1px #fff;
+}

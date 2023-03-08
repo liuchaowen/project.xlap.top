@@ -1,0 +1,1 @@
+<%CFG_IsCan = true%>

@@ -1,0 +1,10 @@
+[
+  { "name": "CCTV5", "link": "https://tv.cctv.com/live/cctv5" },
+  { "name": "CCTV5+", "link": "https://tv.cctv.com/live/cctv5plus/" },
+  { "name": "CBA优直播", "link": "https://www.yoozhibo.net/lanqiu/cba/" },
+  { "name": "CCTV13新闻", "link": "https://tv.cctv.com/live/cctv13/" },
+  { "name": "CCTV10科教", "link": "https://tv.cctv.com/live/cctv10/" },
+  { "name": "CCTV1综合", "link": "https://tv.cctv.com/live/cctv1/" },
+  { "name": "CCTV9纪录", "link": "https://tv.cctv.com/live/cctvjilu/" },
+  { "name": "YouTube", "link": "https://www.youtube.com" }
+]
