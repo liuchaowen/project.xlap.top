@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <head>
-
-<style scoped>
+<style>
     .box {
       height: 100vh;
       background-color: #f4f5f5;
@@ -20,11 +19,20 @@
       border: 1px solid #e5e6eb;
       border-radius: 2px;
     }
+
+    .box .tip-box .logo-box .text{
+        display: block;
+        position: absolute;
+        top: -38px;
+        left: 36px;
+        font-size: 24px;
+        font-weight: bold;
+    }
     
-    .box .tip-box .logo {
+    .box .tip-box .logo-box .logo {
       display: block;
-      width: 116px;
-      height: 24px;
+      width: 35px;
+      height: 35px;
       position: absolute;
       top: -40px;
       left: 0;
@@ -49,7 +57,7 @@
       color: #fff;
       border-radius: 3px;
       border: none;
-      background: #007fff;
+      background: #eea2a4;
       height: 32px;
       font-size: 14px;
       padding: 0 14px;
@@ -59,38 +67,44 @@
     </style>
     <script>
         // 获取 url
+        var url = "";
         function getTargetURL() {
-              const query = window.location.href.split("?")[1] || "";
-              const target = query.split("target=")[1] || "";
-              this.target = window.decodeURIComponent(target);
-            }
+            console.log(window.location.href)
+              var query = window.location.href.split("?")[1] || "";
+              var target = query.split("target=")[1] || "";
+               url = window.decodeURIComponent(target);
+              document.getElementById('target-link').innerHTML = url;
+              console.log(url)
+        }
         // 跳转页面
-            function navigateToTarget() {
-              if (!this.target) {
+        function navigateToTarget() {
+              if (!url) {
                 return;
               }
-        
-              window.location.href = this.target;
-            }
+              window.location.href = url;
+        }
         window.onload = function(){
-            this.getTargetURL(); // 获取 url
+            getTargetURL(); // 获取 url
         }
         </script>
 </head>
 <body>
     <div class="box">
         <div class="tip-box">
-          <img
-            class="logo"
-            src="https://lf-cdn-tos.bytescm.com/obj/static/link_juejin_cn/assets/logo_new.0ec938fb.svg"
-          />
-    
+            <div class="logo-box">
+                <img
+                class="logo"
+                src="https://blog.xlap.top/logo.png"
+              />
+              <span class="text">LapTop</span>
+            </div>
+         
           <div class="content">
             <div class="title">
-              即将离开稀土掘金，请注意账号财产安全
+              即将离开 Cheman 的博客，请注意账号财产安全
             </div>
-            <div class="link">{{ target }}</div>
-            <button class="btn" @click="navigateToTarget">继续访问</button>
+            <div class="link" id="target-link"></div>
+            <button class="btn" onclick="navigateToTarget()">继续访问</button>
           </div>
         </div>
       </div>
