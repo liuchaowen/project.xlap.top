@@ -77,25 +77,23 @@
         }
         </script>
 </head>
-</html>
-// 风险提示页
-<template>
-  <div class="box">
-    <div class="tip-box">
-      <img
-        class="logo"
-        src="https://lf-cdn-tos.bytescm.com/obj/static/link_juejin_cn/assets/logo_new.0ec938fb.svg"
-      />
-
-      <div class="content">
-        <div class="title">
-          即将离开稀土掘金，请注意账号财产安全
+<body>
+    <div class="box">
+        <div class="tip-box">
+          <img
+            class="logo"
+            src="https://lf-cdn-tos.bytescm.com/obj/static/link_juejin_cn/assets/logo_new.0ec938fb.svg"
+          />
+    
+          <div class="content">
+            <div class="title">
+              即将离开稀土掘金，请注意账号财产安全
+            </div>
+            <div class="link">{{ target }}</div>
+            <button class="btn" @click="navigateToTarget">继续访问</button>
+          </div>
         </div>
-        <div class="link">{{ target }}</div>
-        <button class="btn" @click="navigateToTarget">继续访问</button>
       </div>
-    </div>
-  </div>
-</template>
-
+</body>
+</html>
 
