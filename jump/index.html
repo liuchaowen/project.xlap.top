@@ -1,11 +1,13 @@
 <!DOCTYPE html>
+
 <head>
-<style>
+  <meta charset="utf-8">
+  <style>
     .box {
       height: 100vh;
       background-color: #f4f5f5;
     }
-    
+
     .box .tip-box {
       position: absolute;
       left: 50%;
@@ -20,15 +22,15 @@
       border-radius: 2px;
     }
 
-    .box .tip-box .logo-box .text{
-        display: block;
-        position: absolute;
-        top: -38px;
-        left: 36px;
-        font-size: 24px;
-        font-weight: bold;
+    .box .tip-box .logo-box .text {
+      display: block;
+      position: absolute;
+      top: -38px;
+      left: 36px;
+      font-size: 24px;
+      font-weight: bold;
     }
-    
+
     .box .tip-box .logo-box .logo {
       display: block;
       width: 35px;
@@ -37,12 +39,12 @@
       top: -40px;
       left: 0;
     }
-    
+
     .box .tip-box .content .title {
       font-size: 18px;
       line-height: 24px;
     }
-    
+
     .box .tip-box .content .link {
       padding: 16px 0 24px;
       border-bottom: 1px solid #e5e6eb;
@@ -50,7 +52,7 @@
       color: gray;
       font-size: 14px;
     }
-    
+
     .box .tip-box .content .btn {
       display: block;
       margin: 20px 0 24px auto;
@@ -64,50 +66,48 @@
       cursor: pointer;
       outline: 0;
     }
-    </style>
-    <script>
-        // 获取 url
-        var url = "";
-        function getTargetURL() {
-            console.log(window.location.href)
-              var query = window.location.href.split("?")[1] || "";
-              var target = query.split("target=")[1] || "";
-               url = window.decodeURIComponent(target);
-              document.getElementById('target-link').innerHTML = url;
-              console.log(url)
-        }
-        // 跳转页面
-        function navigateToTarget() {
-              if (!url) {
-                return;
-              }
-              window.location.href = url;
-        }
-        window.onload = function(){
-            getTargetURL(); // 获取 url
-        }
-        </script>
+  </style>
+  <script>
+    // 获取 url
+    var url = "";
+    function getTargetURL() {
+      console.log(window.location.href)
+      var query = window.location.href.split("?")[1] || "";
+      var target = query.split("target=")[1] || "";
+      url = window.decodeURIComponent(target);
+      document.getElementById('target-link').innerHTML = url;
+      console.log(url)
+    }
+    // 跳转页面
+    function navigateToTarget() {
+      if (!url) {
+        return;
+      }
+      window.location.href = url;
+    }
+    window.onload = function () {
+      getTargetURL(); // 获取 url
+    }
+  </script>
 </head>
-<body>
-    <div class="box">
-        <div class="tip-box">
-            <div class="logo-box">
-                <img
-                class="logo"
-                src="https://blog.xlap.top/logo.png"
-              />
-              <span class="text">LapTop</span>
-            </div>
-         
-          <div class="content">
-            <div class="title">
-              即将离开 Cheman 的博客，请注意账号财产安全
-            </div>
-            <div class="link" id="target-link"></div>
-            <button class="btn" onclick="navigateToTarget()">继续访问</button>
-          </div>
-        </div>
-      </div>
-</body>
-</html>
 
+<body>
+  <div class="box">
+    <div class="tip-box">
+      <div class="logo-box">
+        <img class="logo" src="https://blog.xlap.top/logo.png" />
+        <span class="text">LapTop</span>
+      </div>
+
+      <div class="content">
+        <div class="title">
+          即将离开 Cheman 的博客，请注意账号财产安全
+        </div>
+        <div class="link" id="target-link"></div>
+        <button class="btn" onclick="navigateToTarget()">继续访问</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
